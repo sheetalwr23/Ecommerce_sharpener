@@ -9,7 +9,6 @@ const CartPage = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
   const navigate = useNavigate();
-
   // Total price calculation
   const totalPrice = () => {
     let total = 0;
@@ -21,7 +20,6 @@ const CartPage = () => {
       currency: "USD",
     });
   };
-
   // Remove item from cart
   const removeCartItem = (pid) => {
     const updatedCart = cart.filter((item) => item._id !== pid);
@@ -45,34 +43,8 @@ const CartPage = () => {
               : "Your Cart is Empty"}
           </h4>
         </div>
-        {/* </div> */}
 
-        {/* <div className="col-md-6"> */}
         {cart?.map((p) => (
-          // <div key={p._id} className="card mb-3">
-          //   <div className="row g-0">
-          //     <div className="col-md-4">
-          //       <img
-          //         src={`${process.env.REACT_APP_API}/api/v1/product/get-productPhoto/${p._id}`}
-          //         className="img-fluid rounded-start"
-          //         alt={p.name}
-          //       />
-          //     </div>
-          //     <div className="col-md-8">
-          //       <div className="card-body">
-          //         <h5 className="card-title">{p.name}</h5>
-          //         <p className="card-text">{p.description.substring(0, 30)}</p>
-          //         <p className="card-text">Price: {p.price}</p>
-          //         <button
-          //           className="btn btn-danger"
-          //           onClick={() => removeCartItem(p._id)}
-          //         >
-          //           Remove
-          //         </button>
-          //       </div>
-          //     </div>
-          //   </div>
-          // </div>
           <Card
             imagePath={`/api/v1/product/get-productPhoto/${p._id}`}
             name={p.name}
