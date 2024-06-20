@@ -1,13 +1,356 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+} */
+
+/* Apply Playfair Display font with weight 700 to headings */
+/* h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+} */
+
+/* Layout.css  */
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+/* navbar css */
+.navbar {
+  background-color: #f4ebca;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px rgb(235, 188, 112);
+  --webkit-box-shadow: 0 8px 6px -6px rgb(48, 46, 46);
+  z-index: 1000;
+  /* border-bottom: solid rgb(178, 119, 119) !important; */
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid rgb(193, 100, 100);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 3px;
+}
+
+.search-form {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.search-form input {
+  border: none;
+  border-radius: 0;
+}
+.search-form button {
+  background-color: #100f0f;
+  border-radius: 0;
+  color: white;
+}
+.nav-link:hover {
+  color: rgb(198, 38, 38); /* Change to your desired highlight color */
+}
+
+/* ==========footer============= */
+.footer {
+  color: rgb(54, 49, 49);
+  padding: 25px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #ebdfcc, #f2e48a);
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(54, 49, 49);
+  padding: 10px;
+  justify-content: center;
+}
+
+.footer a:hover {
+  color: #fc8936;
+  border-bottom: 1px solid #d46743;
+}
+
+/* page not found  */
+.pagenotfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.pagenotfound-title {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  color: #ff5722; /* Orange color for title */
+}
+
+.pagenotfound-subtitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pagenotfound-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.pagenotfound-link {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.pagenotfound-link:hover {
+  background-color: #0056b3;
+}
+
+/* contact us page */
+.contact-container {
+  margin: 50px auto;
+  margin-top: 90px;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f6ead9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(142, 116, 116, 0.1);
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-content {
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Gap between the columns */
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-text p {
+  margin-bottom: 20px;
+}
+
+/* About us */
+
+/* About component CSS */
+
+/* Center the content */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Adjust the height as needed */
+}
+
+/* About.css */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.about-image {
+  width: 50%;
+  align-items: center;
+  margin-left: 80px;
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  /* background-color: #f6ead9; */
+}
+
+/* privacy policy */
+.privacy-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.privacy-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.privacy-text {
+  text-align: justify;
+  /* background-color: #f6ead9; */
+}
+
+/* register */
+
+.wide-input {
+  width: 400px; /* Adjust the width as needed */
+}
+.container-area {
+  min-height: 90vh;
+  overflow-y: auto;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+/* login */
+.forgot-password-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(230, 40, 40);
+  /* font-size: 18px; */
+}
+
+.forgot-password-link:hover {
+  color: #007bff; /* Change to your desired hover color */
+}
+
+/* AdminMenu.css */
+
+.list-group {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+  color: #090909;
+}
+
+.list-group-item:hover {
+  background-color: rgb(247, 237, 220);
+}
+
+.list-group-item.active {
+  background-color: rgb(247, 237, 220);
+  color: #0b0b0b;
+}
+.admin-menu-container {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.admin-panel-heading {
+  background-color: #e3ecf6;
+  color: #0b0a0a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.admin-menu-item {
+  border: 1px solid #625c51;
+}
+/* user menu */
+.user-menu-container {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.user-panel-heading {
+  color: #333;
+}
+
+.user-menu-item {
+  color: #333;
+  border-color: #dee2e6;
+}
+
+.user-menu-item:hover {
+  background-color: #2887e7; /* Change background color on hover */
+}
+
+.user-menu-item.active {
+  background-color: #e9ecef; /* Change background color for active link */
+}
+
+/* product details */
+.product-details-container {
+  margin-top: 20px;
+}
+
+.product-image {
+  height: 400px;
+  width: 400px;
+  margin-left: 200px;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h1 {
+  font-size: 24px;
+}
+
+.product-info h5 {
+  font-size: 16px;
+}
+
+.product-info button {
+  box-shadow: pink;
+}
+/* categories.js */
+.category-card {
+  box-shadow: 0 4px 6px rgba(234, 186, 186, 200); /* Adjust values as needed */
+}
+
+.category-card:hover {
+  background-color: pink;
 }
