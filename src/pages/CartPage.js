@@ -21,7 +21,10 @@ const CartPage = () => {
       currency: "USD",
     });
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
   // Remove item from cart
   const removeCartItem = (pid) => {
     const updatedCart = cart.filter((item) => item._id !== pid);

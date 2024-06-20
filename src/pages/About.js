@@ -16,9 +16,13 @@ const About = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
               officiis obcaecati esse tempore unde ratione, eveniet mollitia,
               perferendis eius temporibus dicta blanditiis doloremque explicabo
+<<<<<<< HEAD
               quasi sunt vero optio cum aperiam vel consectetur! Laborum enim
               accusantium atque, excepturi sapiente amet! Tenetur ducimus aut
               commodi illum quidem neque tempora nam.
+=======
+              quasi sunt vero optio cum aperiam vel consectetur!
+>>>>>>> origin/master
             </p>
           </div>
         </div>
